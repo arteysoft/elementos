@@ -1,0 +1,6 @@
+Nos piden que ante la eventualidad de una falla en SQL Server, se registre la venta
+en un archivo de texto en formato JSON.
+
+Hacer la logica de como seria, sin entrar en el detalle del archivo de texto 
+ni tampoco en el formato JSON.
+
