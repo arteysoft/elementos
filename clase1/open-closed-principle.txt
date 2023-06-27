@@ -1,0 +1,4 @@
+Este principio lo que plantea es que una clase, debería ser extensible o bien cerrada para modificaciones
+pero abierta para cambios.
+
+Problema muy simple: Tomar dos valores de la consola, nombre y vehiculo.
