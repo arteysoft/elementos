@@ -1,6 +1,7 @@
 package edu.it.components;
 
 import java.util.Scanner;
+import java.util.UUID;
 
 import edu.it.dto.CompraDTO;
 
@@ -11,7 +12,7 @@ public class LeerConsolaClienteAutoModelo implements LectorClienteAutoModelo {
 		String cliente = teclado.next();
 		System.out.println("Ingrese el modelo: ");
 		String modelo = teclado.next();
-		var compra = new CompraDTO(cliente, modelo);
+		var compra = new CompraDTO(UUID.randomUUID().toString(), cliente, modelo);
 		return compra;
 	}
 }
