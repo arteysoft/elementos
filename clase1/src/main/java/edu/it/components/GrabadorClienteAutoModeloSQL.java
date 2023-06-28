@@ -15,7 +15,7 @@ public class GrabadorClienteAutoModeloSQL implements GrabadorClienteAutoModelo {
 		// Pasar CompraDTO a Compra Entity
 		
 		var compra = new Compra();
-		compra.setId(compra.getId());
+		compra.setId(compraDTO.id);
 		compra.setNombre(compraDTO.cliente);
 		compra.setModelo(compraDTO.autoModelo);
 		

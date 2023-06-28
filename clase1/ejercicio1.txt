@@ -4,3 +4,25 @@ en un archivo de texto en formato JSON.
 Hacer la logica de como seria, sin entrar en el detalle del archivo de texto 
 ni tampoco en el formato JSON.
 
+------------------------------------------------------------------------------------
+
+Dado una variable global, que indica si se puede utilizar la base de datos SQL
+grabar o bien en SQL o bien en JSON.
+
+Dada una variable global. Una configuracion que indique que NO se puede utilizar SQL
+por temas de mantenimiento.
+
+------------------------------------------------------------------------------------
+
+1) Leemos la variable de configuracion para ver si se puede o no utilizar SQL
+   
+   [Chequea config] ------> SI ------> Tener compuesto GrabadorCompraSQLEventualJSON
+   [Chequea config] ------> NO ------> Voy derecho a grabar en JSON
+
+   Donde se plantea que esta serie de decorator puede ser una chain of responsability
+
+   Chequea la config, grabador con eventual grabado en json, y termina en grabador SQL
+
+   Voy interceptando ---> 1) Chequea config 
+                          2) GrabadorCompraSQLEventualJSON 
+                          3) GrabadorClienteAutoModeloSQL
