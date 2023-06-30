@@ -1,1 +1,1 @@
-java -jar target\Patrones-1.1.jar
+java -jar -DtipoMenu=com.bolivarsoft.components.MenuFileSystem target\Patrones-1.1.jar com.bolivarsoft.components.MenuFileSystem

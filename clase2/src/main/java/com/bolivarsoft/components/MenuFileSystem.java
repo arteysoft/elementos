@@ -9,12 +9,9 @@ import javax.mispec.menu.MenuItem;
 public class MenuFileSystem implements Menu {
 	private MetadataMenu metadataMenu;
 	
-	public static Menu crearMenu() {
-        return new MenuFileSystem(new LectorMetadataMenu().leer());
-    }
-	
-	public MenuFileSystem(MetadataMenu metadataMenu) {
-        this.metadataMenu = metadataMenu;
+	public Menu crearMenu() {
+		this.metadataMenu = new LectorMetadataMenu().leer();
+		return this;
     }
 	
 	private Opcion mostrarIntento() {
