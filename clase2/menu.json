@@ -1,0 +1,22 @@
+{
+	"titulo": "Bienvenido - Inversion of dependency - Ingrese una opcion",
+	"opciones": [{
+		"nroOpcion": 1,
+		"descripcion": "Decir la hora",
+		"continuar": true,
+		"claseInstanciar": "edu.it.elementos.ServicioHora"
+	}, {
+		"nroOpcion": 2,
+		"descripcion": "Cotizacion del dolar blue",
+		"continuar": true,
+		"claseInstanciar": "dolarblue"
+	}, {
+		"nroOpcion": 3,
+		"descripcion": "Salir",
+		"continuar": false,
+		"claseInstanciar": "N/A"
+	}],
+	"configuracion": {
+		"totalIntentos": 4
+	}
+}
