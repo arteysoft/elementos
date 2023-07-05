@@ -1,8 +1,8 @@
 package edu.it.elementos;
 
-import com.inversiondecontrol.ejemplo.HolaMundoImpl;
-import com.observer.problema.Observable;
-import com.observer.problema.Observador;
+import com.modeloactor.ejemplo.Actor;
+import com.modeloactor.ejemplo.MiPrimerActor;
+import com.modeloactor.ejemplo.SegundoActor;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -11,8 +11,13 @@ public class App {
         // var hm = new HolaMundoImpl();
         // hm.aceptarConexion();
         
-        var obs = new Observable();
-        obs.addNotificable(new Observador());
-        obs.run();
+        // var obs = new Observable();
+        // obs.addNotificable(new Observador());
+        // obs.run();
+        
+        Actor segundoActor = new SegundoActor();
+        Actor miPrimerActor = new MiPrimerActor(segundoActor);
+        
+        miPrimerActor.encolarMensaje("100");
     }
 }
