@@ -5,11 +5,15 @@ import java.util.List;
 
 public abstract class Actor extends Thread {
 	protected List<String> elementosPendeintes;
+	protected Broker broker;
 	
 	public Actor() {
         elementosPendeintes = new ArrayList<String>();
         this.start();
     }
+	public void setBroker(Broker broker) {
+		this.broker = broker;
+	}
 	public void encolarMensaje(String t) {
         synchronized(elementosPendeintes) {
             elementosPendeintes.add(t);

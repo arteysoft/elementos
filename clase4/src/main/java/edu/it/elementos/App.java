@@ -1,8 +1,11 @@
 package edu.it.elementos;
 
-import com.modeloactor.ejemplo.Actor;
-import com.modeloactor.ejemplo.MiPrimerActor;
-import com.modeloactor.ejemplo.SegundoActor;
+import com.mediator.Ana;
+import com.mediator.Broker;
+import com.mediator.Christian;
+import com.mediator.MemoryBroker;
+import com.mediator.Mensaje;
+import com.mediator.Suscriptor;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -15,9 +18,13 @@ public class App {
         // obs.addNotificable(new Observador());
         // obs.run();
         
-        Actor segundoActor = new SegundoActor();
-        Actor miPrimerActor = new MiPrimerActor(segundoActor);
+        Broker brokerPrincipal = new MemoryBroker();
         
-        miPrimerActor.encolarMensaje("100");
+        brokerPrincipal.suscribir(new Suscriptor("com.mediador.christian", new Christian()));
+        brokerPrincipal.suscribir(new Suscriptor("com.mediador.ana", new Ana()));
+        
+        brokerPrincipal.enviarMensaje(new Mensaje("com.mediador.christian", "{}"));
+        
+        
     }
 }
