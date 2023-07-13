@@ -43,7 +43,7 @@ Se debe loggear toda la actividad de transito.
 
 Como lo vamos a trabajar ?
 
-Hay un actor que va a estar todo el tiempo iterando y sensando (NO PUEDO DETENERLO CON UNA TAREA SINCRONICA) ----> Actor que loguea y al actor que Evalua
+Hay un actor que va a estar todo el tiempo iterando y sensando (NO PUEDO DETENERLO CON UNA TAREA SINCRONICA) ----> [****Actor que loguea****] y al actor que Evalua
 Hay otro actor que va a loggear toda la actividad de transito
 Hay un actor que va a evaluar si para ese vehiculo y ese clima y esa velocidad corresponde labrar un acta
        si corresponde ? ------> Enviar mensaje a un actor que se llama generador de tickets
@@ -52,7 +52,8 @@ Hay un actor que va a evaluar si para ese vehiculo y ese clima y esa velocidad c
 
 
 
-
+[****Actor que loguea****] CREAR ESTE ACTOR Y ENVIARLE UN MENSAJE SIEMPRE, MULTA O NO.
+Loguear en /var/elementos/logs/log.log (UN SOLO ARCHIVO)
 
 
 

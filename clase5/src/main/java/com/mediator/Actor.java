@@ -41,5 +41,5 @@ public abstract class Actor extends Thread {
     		}
     	}    	
     }
-    protected abstract void onNewMessage(String t);
+    protected abstract void onNewMessage(String strJson);
 }

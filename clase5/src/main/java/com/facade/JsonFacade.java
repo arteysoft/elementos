@@ -12,7 +12,7 @@ public class JsonFacade {
 	public static String toJson(Object o) {
 		return gson.toJson(o);
 	}
-	public <T> T fromJson(String json, Class<T> classOfT) {
+	public static <T> T fromJson(String json, Class<T> classOfT) {
 		 return gson.fromJson(json, classOfT);
 	}
 }
