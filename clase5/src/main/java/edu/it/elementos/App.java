@@ -10,6 +10,7 @@ import com.mediator.ejercicio.SensorPermanente;
 import com.mediator.repository.GrabadorMulta;
 import com.mediator.repository.GrabadorMultaJson;
 import com.mediator.repository.GrabadorMultaSQL;
+import com.mediator.repository.LogActividad;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -23,7 +24,8 @@ public class App {
         brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.grabadormulta", new GrabadorMulta()));
         brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.grabadormultajson", new GrabadorMultaJson()));
         brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.grabadormultasql", new GrabadorMultaSQL()));
-        
+        brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.logactividad", new LogActividad("/var/elementos/logs/log.log")));
+        brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.logrecovery", new LogActividad("/var/elementos/logs/recovery/log.log")));
         
         brokerPrincipal.enviarMensaje(new Mensaje("com.mediator.ejercicio.sensorpermanente", new String("GO")));
     }

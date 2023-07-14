@@ -24,6 +24,7 @@ public class SensorPermanente extends Actor {
             var strClimaVehiculo = JsonFacade.toJson(new ClimaVehiculo(tipoDeClima, vehiculo));
             
             broker.enviarMensaje(new Mensaje("com.mediator.ejercicio.evaluador", strClimaVehiculo));
+            broker.enviarMensaje(new Mensaje("com.mediator.repository.logactividad", strClimaVehiculo));
         }
 	}
 }
