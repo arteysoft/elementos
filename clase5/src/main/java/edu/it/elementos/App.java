@@ -16,7 +16,6 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Curso patrones - Bienvenidos");
         
-        
         Broker brokerPrincipal = new MemoryBroker();
         
         brokerPrincipal.suscribir(new Suscriptor("com.mediator.ejercicio.sensorpermanente", new SensorPermanente()));
@@ -26,6 +25,8 @@ public class App {
         brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.grabadormultasql", new GrabadorMultaSQL()));
         brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.logactividad", new LogActividad("/var/elementos/logs/log.log")));
         brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.logrecovery", new LogActividad("/var/elementos/logs/recovery/log.log")));
+        // brokerPrincipal.suscribir(new Suscriptor("com.mediator.repository.recoveryPermanente", FALTA ESTE ACTOR));
+        
         
         brokerPrincipal.enviarMensaje(new Mensaje("com.mediator.ejercicio.sensorpermanente", new String("GO")));
     }
