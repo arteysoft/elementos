@@ -1,0 +1,1 @@
+java -jar target\State-1.1.jar miApp
