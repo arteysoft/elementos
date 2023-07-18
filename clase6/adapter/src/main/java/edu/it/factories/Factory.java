@@ -11,3 +11,11 @@ public class Factory {
 		// return new ServicioDiscador(new DiscadorAdapter(new DialerPro()));
 	}
 }
+
+/*
+ * CreadorServicioPotencia
+ * CreadorServicioPlusPro
+ * 
+ * edu.it.factories.CreadorServicioPotencia
+ * edu.it.factories.CreadorPlusPro
+ */
