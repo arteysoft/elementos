@@ -7,8 +7,12 @@ import edu.it.model.Usuario;
 import static edu.it.Utiles.Util.dormir;
 
 public class ServicioDiscador implements Runnable {
-	DiscadorPotencia discador = new DiscadorPotencia();
+	DiscadorAbstracto discador = null;
 	
+	public ServicioDiscador(DiscadorAbstracto discador) {
+		this.discador = discador;
+	}
+
 	public void run() {
 		for (;;) {
 			Integer x = new Random().nextInt(4);
