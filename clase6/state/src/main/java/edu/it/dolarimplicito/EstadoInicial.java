@@ -10,6 +10,6 @@ public class EstadoInicial implements State {
 				"C:\\cursos\\elementos\\clase6\\state\\chromedriver.exe");
 		
 		System.out.println("Estado incial");		
-		return new ConsultaCotizacionLocal(mapa);
+		return new ConsultaCotizacionLocal();
 	}
 }

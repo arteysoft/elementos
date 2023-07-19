@@ -10,6 +10,9 @@ public class Calculos implements State {
 		System.out.println("Realice los calculos pedidos");
 		Double dolarImplicito = model.local / model.nuevaYork;
 		System.out.println("El valor del dolar implicito es: " + dolarImplicito);
-		return new EstadoInicial(mapa);
+		Double local = (Double)mapa.get("cotizacion_ypf_mercado_local");
+		Double nyse = (Double)mapa.get("cotizacion_ypf_mercado_nyse");
+		System.out.println("El valor del dolar implicito por HashMap es: " + (local / nyse));
+		return new EstadoInicial();
 	}
 }

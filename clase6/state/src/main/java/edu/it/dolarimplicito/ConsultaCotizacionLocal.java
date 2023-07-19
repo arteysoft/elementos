@@ -28,13 +28,14 @@ public class ConsultaCotizacionLocal implements State {
                     .replace(",", ".");
 			
 			model.local = Double.valueOf(parseable);
+			mapa.put("cotizacion_ypf_mercado_local", model.local);			
 			System.out.println(model.local);
 			
-			return new ConsultaCotizacionExterior(mapa);
+			return new ConsultaCotizacionExterior();
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		return new EstadoInicial(mapa);
+		return new EstadoInicial();
 	}
 }

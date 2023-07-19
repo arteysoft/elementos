@@ -12,7 +12,7 @@ public class Init {
 		HashMap<String, Object> mapa = new HashMap<String, Object>();
 		
 		for (;;) {
-			estado = estado.execute();
+			estado = estado.execute(mapa);
 			Util.dormir(3);
 		}
 	}

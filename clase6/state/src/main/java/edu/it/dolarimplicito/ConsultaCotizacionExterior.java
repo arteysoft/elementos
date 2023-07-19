@@ -28,12 +28,13 @@ public class ConsultaCotizacionExterior implements State {
                     .replace(",", ".");
 			
 			model.nuevaYork = Double.valueOf(parseable);
+			mapa.put("cotizacion_ypf_mercado_nyse", model.nuevaYork);
 			
-			return new Calculos(mapa);
+			return new Calculos();
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		return new EstadoInicial(mapa);
+		return new EstadoInicial();
 	}
 }
